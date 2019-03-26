@@ -1,0 +1,43 @@
+body {
+	background-color: grey;
+	color: white;
+	text-align: center;
+}
+
+
+#table1 {
+	border: 3px solid black;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#tableHeader {
+	background-color: yellow;
+	color: blue;
+}
+.tableBody {
+	background-color: green;
+}
+.time {
+	background-color: blue;
+	color: yellow;
+	
+}
+
+#contactMe {
+	background-color: grey;
+	text-color: white;
+	margin-left: 300px;
+	margin-right: 300px;
+}
+
+#dayNeeded {
+	margin-left: 300px;
+	margin-right: 300px;
+}
+
+#service {
+	margin-left: 300px;
+	margin-right: 300px;
+}
