@@ -4,8 +4,8 @@
 	<link rel="stylesheet" type="text/css" href="./StyleSheet.css">
 </head> 
 <body>
-	<table class=table1 border="3">
-		<tr class="tableHeader">
+	<table id="table1">
+		<tr id="tableHeader">
 			<th></th>
 			<th>Monday</th>
 			<th>Tuesday</th>
@@ -14,7 +14,7 @@
 			<th>Friday</th>
 		</tr>
 		<tr class="tableBody">
-			<td>Morning</td>
+			<td class="time">Morning</td>
 			<td>Eat Cereal</td>
 			<td>Eat Pancakes</td>
 			<td>Eat Waffles</td>
@@ -22,7 +22,7 @@
 			<td>Eat Bagel</td>
 		</tr>
 		<tr class="tableBody">
-			<td>Afternoon</td>
+			<td class="time">Afternoon</td>
 			<td>Workout</td> <!-- note -->
 			<td>Play video games</td>
 			<td>Basketball</td>
@@ -30,7 +30,7 @@
 			<td>Nap</td>
 		</tr>
 		<tr class="tableBody">
-			<td>Evening</td>
+			<td class="time">Evening</td>
 			<td>Watch a movie</td>
 			<td>Go out to eat</td>
 			<td>Ice skating</td>
@@ -38,49 +38,49 @@
 			<td>Watch TV</td>
 		</tr>
 	</table>
-<article>
-		<form class="ContactMe">
+	<article>
+			<form id="contactMe">
+				<fieldset>
+				<legend>Contact Me</legend>
+				<label for="email">Email</label>
+				<input type="text"  id="email">
+				<label for="FirstName">First Name</label>
+				<input type="text" id="FirstName">
+				</fieldset>
+			</form>
+	</article>
+	<article>
+		<form id="dayNeeded">
 			<fieldset>
-			<legend>Contact Me</legend>
-			<label for="email">Email</label>
-			<input type="text"  id="email">
-			<label for="FirstName">First Name</label>
-			<input type="text" id="FirstName">
+				<legend>Day Needed</legend>
+				<input type="checkbox" id="day1" name="DayOfWeek" value="Monday">
+				<label for="day1">Monday</label>
+		
+				<input type="checkbox" id="day2" name="DayOfWeek" value="Tuesday">
+				<label for="day2">Tuesday</label>
+		
+				<input type="checkbox" id="day3" name="DayOfWeek" value="Wednesday">
+				<label for="day3">Wednesday</label>
+		
+				<input type="checkbox" id="day4" name="DayOfWeek" value="Thursday">
+				<label for="day4">Thursday</label>
+		
+				<input type="checkbox" id="day5" name="DayOfWeek" value="Friday">
+				<label for="day5">Friday</label>
 			</fieldset>
 		</form>
-</article>
-<article>
-	<form class="DayNeeded">
+	</article>
+	<article>
 		<fieldset>
-		<legend>Day Needed</legend>
-		<input type="checkbox" id="day1" name="DayOfWeek" value="Monday">
-		<label for="day1">Monday</label>
-		
-		<input type="checkbox" id="day2" name="DayOfWeek" value="Tuesday">
-		<label for="day2">Tuesday</label>
-		
-		<input type="checkbox" id="day3" name="DayOfWeek" value="Wednesday">
-		<label for="day3">Wednesday</label>
-		
-		<input type="checkbox" id="day4" name="DayOfWeek" value="Thursday">
-		<label for="day4">Thursday</label>
-		
-		<input type="checkbox" id="day5" name="DayOfWeek" value="Friday">
-		<label for="day5">Friday</label>
+		  <legend>Service Needed</legend>
+			<select name="serviceNeeded" id="serviceNeeded" multiple>
+				<option value="cleaning">Aquarium Cleaning</option>
+				<option value="feeding">Aquarium Feeding</option>
+				<option value="reseal">Aquarium Reseal</option>
+				<option value="drill"> Aquarium Overflow Install</option>
+			</select>	
 		</fieldset>
-	</form>
-</article>
-<article>
-	<legend>Service Needed</legend>
-	<fieldset>
-	<select name="serviceNeeded" id="serviceNeeded" multiple>
-		<option value="cleaning">Aquarium Cleaning</option>
-		<option value="feeding">Aquarium Feeding</option>
-		<option value="reseal">Aquarium Reseal</option>
-		<option value="drill"> Aquarium Overflow Install</option>
-	</select>	
-	</fieldset>
-</article>
-<button onclick="document.getElementById('secondForm').reset()">Submit</button>
+	</article>
+<button onclick="document.getElementById('email').reset()">Submit</button>
 </body>
 </html>
