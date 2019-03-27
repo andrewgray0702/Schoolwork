@@ -1,0 +1,73 @@
+@import url('https://fonts.google.com/specimen/Germania+One');
+
+#header1, #header2 {
+	background-color: black;
+	width: 755px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#header1 {
+	text-align: center;
+	color: white;
+	font-family: "Verdana", sans-serif;
+}
+
+#header2 {
+	text-align: center;
+	color: white;
+	font-family: 'Germania One', cursive;
+}
+#body {
+	font-family: "Verdana", "Times New Roman", serif;
+}
+#image1 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25%;
+}
+
+#image1:hover {
+	border-radius: 0%;
+}
+
+#interests {
+	display: inline-block; 
+	border: 3px solid black; /*  note */
+	margin-top: 10px;
+	margin-left: 319px;
+	margin-bottom: 10px;
+	text-align: center;
+	width: 200px;
+}
+
+a:hover {
+	color: orange;
+}
+
+#skills {
+	width: 200px;
+	border: 3px solid black;
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#container {
+	width: 755px;
+	border: 3px solid black;
+	margin-left: auto;
+	margin-right: auto;	
+	background-color: grey;
+}
+
+#footer {
+	text-align: center;
+	color: white;
+	background-color: black;
+	width: 755px;
+	margin-left: auto;
+	margin-right: auto;
+}
