@@ -1,0 +1,33 @@
+@charset "ISO-8859-1";
+#header1 {
+	width: 100%;
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin: auto;
+}
+
+#container {
+	width: 70%;
+	margin: auto;
+}
+
+#info1 {
+	float: left;
+	border: solid black 3px;
+	position: fixed;
+}
+
+#info2 {
+	float: right;
+	border: solid black 3px;
+	position: relative;
+}
+
+#contactInfo {
+	text-align: center;
+}
+
+#yourContactInfo {
+	text-align: center;
+}

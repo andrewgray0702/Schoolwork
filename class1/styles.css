@@ -61,7 +61,7 @@ a:hover:not(.active) {
 	color: black;
 	text-shadow: 3px 3px white;
 	background-image: url("fish.jpg");
-	background-position: 50%;
+	background-position: 50%; 
 }
 
 footer {
