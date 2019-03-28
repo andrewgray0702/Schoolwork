@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flex Practice</title>
+<style>
+	.displayFlex {
+		display: flex;
+	}
+	/* HEADER AND FOOTER */
+ 	header {
+		color: white;
+		background-color: black;
+		text-align: center;
+		height: 100px;
+		font-size: 80px;
+		width: 100%;
+	}
+	footer {
+		color: white;
+		background-color: black;
+		text-align: center;
+		height: 100px;
+		font-size: 80px; 
+	}
+	/* DIVS */
+	#container {
+		display: flex;
+	}
+	div {
+		text-align: center;
+		font-size: 40px;
+		min-height: 100px;
+	}
+	
+	.leftDiv {
+		width: 70%;
+		float: left;
+		flex-flow: row wrap;
+	}
+	
+	.rightDiv {
+		width: 30%;
+		float: right;
+		flex-direction: column;
+	}
+	.blueDiv {
+		flex: 1 1 200px;
+		background-color: blue;
+		justify-content: space-around;
+		margin: 10px;
+	}
+	.redDiv {
+		flex: 1 1 200px;
+		background-color: red;
+		margin: 10px;
+		text-align: center;
+	}
+	/* ORDER */
+	.order1 {
+		order: 1;
+	}
+	.order2 {
+		order: 2;
+	}
+	
+	.order3 {
+		order: 3;
+	}
+	.order4 {
+		order: 4;
+	}
+	.order5 {
+		order: 5;
+	}
+	.order6 {
+		order: 6;
+	}
+</style>
+</head>
+<body>
+<header>Header</header>
+<div id="container">
+<div class="leftDiv displayFlex">
+	<div class="blueDiv order1">1</div>
+	<div class="blueDiv order3">2</div>
+	<div class="blueDiv order6">3</div>
+	<div class="blueDiv order5">4</div>
+	<div class="blueDiv order4">5</div>
+	<div class="blueDiv order2">6</div>
+</div>
+<div class="rightDiv displayFlex">
+	<div class="redDiv order3">1</div>
+	<div class="redDiv order1">2</div>
+	<div class="redDiv order2">3</div>
+</div>
+</div>
+
+</body>
+	<footer>Footer</footer>
+</html>
