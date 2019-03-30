@@ -2,7 +2,7 @@
 
 #header1, #header2 {
 	background-color: black;
-	width: 755px;
+	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -21,6 +21,7 @@
 	font-family: "Verdana", "Times New Roman", serif;
 }
 #image1 {
+	width: 100%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -32,42 +33,65 @@
 }
 
 #interests {
-	display: inline-block; 
-	border: 3px solid black; /*  note */
-	margin-top: 10px;
-	margin-left: 319px;
-	margin-bottom: 10px;
+	flex-basis: 25%;
+	border: 3px solid black;
+	box-sizing: border-box;
 	text-align: center;
-	width: 200px;
+	margin: 20px;
+	
 }
 
 a:hover {
-	color: orange;
+	background-color: #AFAFB8;
 }
-
+a {
+	text-decoration: none;
+	color: white;
+}
 #skills {
-	width: 200px;
+	flex-basis: 25%;
 	border: 3px solid black;
-	display: inline-block;
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-bottom: 10px;
+	box-sizing: border-box;
 	text-align: center;
+	margin: 20px;
 }
 
-#container {
-	width: 755px;
+.container {
+	width: 60%;
 	border: 3px solid black;
 	margin-left: auto;
 	margin-right: auto;	
 	background-color: grey;
+	box-sizing: border-box;
+}
+.boxContainer {
+	display: flex;
+	justify-content: center;
 }
 
 #footer {
 	text-align: center;
 	color: white;
 	background-color: black;
-	width: 755px;
+	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
+}
+.navBar {
+	display: flex;
+	flex-direction: row;
+	background-color: black;
+	color: white;
+	
+}
+.navContainer {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.quarter {
+	flex-basis: 25%;
+}
+.center {
+	text-align: center;
 }
