@@ -17,33 +17,31 @@ footer {
 	background-color: black;
 }
 
-nav {
+.navBar {
 	display: flex;
 	flex-direction: row;
-	width: 100%;
-	height: 3vh;
 	background-color: black;
 	color: white;
+	
+}
+.navContainer {
+	width: 100%;
+}
+.quarter {
+	flex-basis: 25%;
+}
+.center {
 	text-align: center;
 }
-a.navLink {
-	flex-basis: 25%;
-	justify-content: space-between;
-}
 
-nav:hover {
-	background-color: grey;
+a:hover {
+	background-color: #AFAFB8;
 }
 
 .center {
 	text-align: center;
 }
 
-.navBar {
-	display: flex;
-	width: 100%;
-	flex-direction: row;
-}
 
 #container {
 	width: 100%;
@@ -73,27 +71,26 @@ nav:hover {
 
 a {
 	text-decoration: none;
-}
-a:visited {
 	color: white;
 }
-a:active {
-	background-color: grey;
+.active {
+	background-color: #585861;
 }
+
 </style>
 <meta charset="ISO-8859-1">
 <title>Portfolio</title>
 </head>
 <header>Portfolio</header>
 <body>
-	<div class="navBar">
-		<nav>
-		<a class="navLink" href="portfolio.html">Portfolio</a>
-		<a class="navlink" href="Aboutpage.html">About Me</a>
-		<a class="navlink" href="google.com">Lorem Ipsom</a>
-		<a class="navlink" href="google.com">Lorem Ipsom</a>
-		</nav>
-	</div>
+<div class="navContainer">
+<nav class="navBar center">
+	<a class="quarter active" href="portfolio.html">Portfolio</a>
+	<a class="quarter" href="Aboutpage.html">About Me</a>
+	<a class="quarter" href="contactMe.html">Contact Me</a>
+	<a class="quarter" href="">Lorem Ipsum</a>
+</nav>
+</div>
 	<div id="container">
 		<div id="projects">
 			<h1>Projects</h1>
