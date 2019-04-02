@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var characterGold
+var characterName = prompt("Choose a character name");
+var characterClass = prompt("Choose a class -- Warrior or Thief");
+if(characterClass == "Warrior"){
+	console.log("You are a warrior");
+} else if(characterClass == "Thief"){
+	console.log("You are a thief");
+} else {
+	var characterClass = prompt("Sorry that is not a class. Please choose Warrior or Thief.");
+}
+var firstChoice = prompt("Hi " + characterName + " The " + characterClass + ". Welcome to my text game. You arrive at a river. Do you swim accross the river or go over the bridge? Please choose swim or bridge");
+if(firstChoice == "bridge"){
+	alert("While crossing the bridge, it collapses and you die. You are dead");
+} else if(firstChoice == "swim") {
+	alert("You make it safetely across the river");
+	var secondChoice = prompt("You arrive to a road. Across the road is a large forest. Do you follow the road, or go into the woods? Please choose road or forest");
+}
+if(secondChoice == "road"){
+	var secondChoiceLeft = prompt("A group of bandits appear. They look tough. Do you run or do you fight? Please choose run or fight");
+	if(secondChoiceLeft == "run"){
+		alert("You swiftly run away toward the woods. The bandits are slow, you seem to have lost them. However, while looking back you trip and fall. You are impaled. You are dead");
+	}
+	if(secondChoiceLeft == "fight"){
+		alert("The bandits are tough, but you are tougher. Before long the bandits retreat to their mommys. You loot their stuff and find 100 gold");
+		var characterGold = +100;
+		console.log("100 gold added");
+	}
+}
+if(secondChoice == "forest" || characterGold == 100){
+	var choiceForks = prompt("You arrive at a fork. Do you take the left fork or right fork? Please choose left or right.");
+	if(choiceForks == "right"){
+		alert("As you follow the path, everything gets dark... You know you've taken the wrong path... A group of satanist appears. You are sacrificed. You are dead");
+	}
+	if(choiceForks == "left"){
+		var takeGold = prompt("You stumble upon a leprechaun. He seems friendly. He takes you back to his house and shows you this HUGE pot of gold. Do you take the gold or turn it down? Please choose take or leave");
+		if(takeGold == "take"){
+			alert("The leprechaun cheerfully helps you get it loaded up on a cart. However, before you get to the door you feel a whack on your head. The leprechaun is an unstable alcoholic. You bleed out. You are dead");
+			if(characterGold == 100){
+				alert("The leprechaun loots your pockets and takes your 100 gold. Now you are dead and broke.");
+			}
+		} else if(takeGold == "leave"){
+			alert("On your way out you notice all of the empty vodka bottles littered about the leprechauns hut. You start to get nervous... until you feel a whack on your head. You bleed out. You are dead.");
+			if(characterGold == 100){
+				alert("The leprechaun loots your pockets and takes your 100 gold. Now you are dead and broke.");
+			}
+		}
+	}
+} 
+</script>
+</body>
+</html>
