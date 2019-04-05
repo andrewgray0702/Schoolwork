@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .left{
+        float: left;
+        width: 70%;
+      }
+      .right{
+        width: 30%;
+        float: left;
+      }
+      .leftDiv{
+        line-height: 200px;
+        text-align: center;
+        cursor: pointer;
+        width: calc(100%/3 - 4px);
+        margin: 2px;
+        height: 200px;
+        background-color: red;
+        color: white;
+        float: left;
+      }
+      .rButton{
+        line-height: 98px;
+        text-align: center;
+        cursor: pointer;
+        height: 98px;
+        float: left;
+        width: calc(50% - 4px);
+        margin: 2px;
+        background-color: orange;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">
+      <div class="leftDiv" id="l1">1</div>
+      <div class="leftDiv" id="l2">2</div>
+      <div class="leftDiv" id="l3">3</div>
+      <div class="leftDiv" id="l4">4</div>
+      <div class="leftDiv" id="l5">5</div>
+      <div class="leftDiv" id="l6">6</div>
+      <div class="leftDiv" id="l7">7</div>
+      <div class="leftDiv" id="l8">8</div>
+      <div class="leftDiv" id="l9">9</div>
+    </div>
+
+    <div class="right">
+      <div class="rButton" id="r1">1</div>
+      <div class="rButton" id="r2">2</div>
+      <div class="rButton" id="r3">3</div>
+      <div class="rButton" id="r4">4</div>
+      <div class="rButton" id="r5">5</div>
+      <div class="rButton" id="r6">6</div>
+      <div class="rButton" id="r7">7</div>
+      <div class="rButton" id="r8">8</div>
+      <div class="rButton" id="r9">9</div>
+    </div>
+    <script>
+        var left = document.querySelectorAll('.leftDiv');
+        left.forEach(function(val){
+            val.addEventListener('click', function(){
+            var idNum = this.id[1];
+            var right = document.querySelector("#r"+idNum);
+            if(right){
+                right.remove();
+            }
+            else{
+                createElement(idNum);
+            }
+        })});
+        function createElement(id){
+            var container = document.querySelector('.right')
+            var newDiv = document.createElement("div");
+            newDiv.id = "r" + id;
+            newDiv.classList.add('rButton');
+            newDiv.innerText = id;
+            container.append(newDiv);
+        }
+
+    </script>
+  </body>
+</html>

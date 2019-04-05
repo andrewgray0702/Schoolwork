@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+// PIZZA FUNCTION
+function pizza(amtPeople, amtSlices){
+	if(amtPeople == amtSlices || amtPeople%amtSlices == 0){
+		console.log("The pizza can be divided equally");
+	} else if(amtPeople < amtSlices){
+		var slicesLeftOver = (amtPeople%amtSlices);
+	} else if(amtPeople > amtSlices){
+		var peopleWithout = amtSlices - amtPeople;
+	}
+	console.log("There are " + slicesLeftOver + "slices left over")
+	console.log("There are " + peopleWithout + "without an extra slice")
+}
+// RIGHT TRIANGLE
+function rightTriangle(side1, side2, longestSide){
+	if((side1**2) + (side2**2) == (longestSide**2)){
+		console.log("The triangle is a right triangle");
+	} else {
+		console.log("The triangle is not a right triangle ")
+	}
+}
+// WARRIOR DAMAGE
+var warriorHealth = 50;
+function dmgDone(a, b, c, d, e){
+	var totalDmg = a + b + c + d + e;
+	warriorHealth = warriorHealth - totalDmg;
+	if(warriorHealth <= 0){
+		console.log("The warrior is killed")
+	} else {
+		console.log("The warrior defeated the monsters")
+	}
+} 
+// IS IT A RECTANGLE?
+var point1 = {x:1, y:2};
+var point2= {x:2, y:2};
+var point3= {x:2, y:1};
+var point4 = {x:1, y:1};
+function isRectangle(point1, point2, point3, point4){
+	var point1 = {x:1, y:2};
+	var point2= {x:2, y:2};
+	var point3= {x:2, y:1};
+	var point4 = {x:1, y:1};
+	var centerX, centerY;
+	var hp1, hp2, hp3, hp4;
+
+	centerX=(point1.x+point2.x+point3.x+point4.x)/4;
+	centerY=(point1.y+point2.y+point3.y+point4.y)/4;
+	
+	hp1=Math.pow((centerX-point1.x), 2)+Math.pow((centerY-point1.y), 2);
+	hp2=Math.pow((centerX-point2.x), 2)+Math.pow((centerY-point2.y), 2);
+	hp3=Math.pow((centerX-point3.x), 2)+Math.pow((centerY-point3.y), 2);
+	hp4=Math.pow((centerX-point4.x), 2)+Math.pow((centerY-point4.y), 2);
+	return hp1==hp2 && hp1==hp3 && hp1==hp4;
+}
+</script>
+</body>
+</html>

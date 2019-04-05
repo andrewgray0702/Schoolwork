@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <head>
+        <title>DOM Practice</title>
+        <style>
+        .clock{
+            background-color: green;
+            font-size: 80px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class='clock' id='div1'></div>
+    </body>
+    <script>
+    var timeLimit = parseInt(prompt("Please choose a time limit"));
+    var getDiv = document.getElementById('div1');
+    var interval = window.setInterval(function(){
+        console.log(timeLimit);
+        timeLimit--;
+        getDiv.innerText = timeLimit;
+        if(timeLimit === 0){
+            window.clearInterval(interval)
+            getDiv.style.backgroundColor = 'red';
+        }
+    }
+    , 1000)
+    </script>
+</html>

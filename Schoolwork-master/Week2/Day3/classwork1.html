@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <head>
+         <title>DOM Practice</title>
+        <style>
+        .blankDivs{
+            height: 10vh;
+        }
+        #div1{
+            font-size: 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class='blankDivs' id='div1'></div>
+        <div class='blankDivs' id='div2'>SOME TEXT IN DIV2</div>
+        <div class='blankDivs' id='div3'></div>
+    </body>
+    <script>
+    document.getElementById('div1').style.backgroundColor = 'red';
+    window.setTimeout(function(){
+        document.getElementById('div2').style.color = 'blue';
+    }, 10000)
+    var randomColors = ['yellow','blue','green','red','black'];
+    window.setInterval(function(){
+        document.getElementById('div3').style.backgroundColor = randomColors[Math.Floor(Math.random()* 5)];
+    }, 2000)
+
+
+
+    // setInterval(function(){
+    //     var x = Math.floor(Math.random() * 256);
+    //     var y = Math.floor(Math.random() * 256);
+    //     var z = Math.floor(Math.random() * 256);
+    //     var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    //     document.getElementById('div3').style.backgroundColor = bgColor;
+    // }, 2000)    
+    </script>
+</html>

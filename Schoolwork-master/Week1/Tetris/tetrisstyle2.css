@@ -1,0 +1,67 @@
+div {
+	width: 10vw;
+	height: 10vw;
+	box-sizing: border-box;
+	
+}
+div:not(.black) {
+	box-shadow: 0px 0px 5px grey inset;
+}
+
+body {
+	margin: 0;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.black {
+	background-color: black;
+}
+
+.lightBlue {
+	background-color: #27F5FB;
+}
+
+
+.green {
+	background-color: green;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.purple {
+	background-color: purple;
+}
+
+.darkBlue {
+	background-color: #160FEA;
+}
+
+.orange {
+	background-color: orange;
+}
+
+.red {
+	background-color: red;
+}
+
+.top {
+	border-top: 2px solid black;
+}
+
+.bottom {
+	border-bottom: 2px solid black;
+}
+
+.left {
+	border-left: 2px solid black;
+}
+
+.right {
+	border-right: 2px solid black;
+}
+
